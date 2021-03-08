@@ -58,7 +58,7 @@ $e_subject = 'You\'ve been contacted by ' . $form_name . '.';
 // You can change this if you feel that you need to.
 // Developers, you may wish to add more fields to the form, in which case you must be sure to add them here.
 
-$e_body = "You have been contacted by $first_name. $first_name selected service of $select_service, their additional message is as follows. Customer max budge is $select_price, for this project." . PHP_EOL . PHP_EOL;
+$e_body = "Has sido contactado por $form_name. Quiere reservar una mesa para $no_of_persons. Su numero de telefono es $phone" . PHP_EOL . PHP_EOL;
 $e_content = "\"$comments\"" . PHP_EOL . PHP_EOL;
 $e_reply = "You can contact $first_name via email, $email or via phone $phone";
 
