@@ -13,9 +13,9 @@ $form_name     = $_POST['form_name'];
 $email    = $_POST['email'];
 $phone   = $_POST['phone'];
 $no_of_persons   = $_POST['no_of_persons'];
-$preferred_food = $_POST['preferred_food'];
-$occasion = $_POST['occasion'];
 $verify   = $_POST['verify'];
+$date_picker =  $_POST['date_picker'];
+$time_picker = $_POST['time_picker'];
 
 if(trim($form_name) == '') {
 	echo '<div class="error_message">Attention! You must enter your name.</div>';
@@ -51,14 +51,14 @@ $address = "bareltimon@bareltimon.cat";
 
 // Example, $e_subject = '$name . ' has contacted you via Your Website.';
 
-$e_subject = 'You\'ve been contacted by ' . $form_name . '.';
+$e_subject = 'Reserva de ' . $form_name . '.';
 
 
 // Configuration option.
 // You can change this if you feel that you need to.
 // Developers, you may wish to add more fields to the form, in which case you must be sure to add them here.
 
-$e_body = "Has sido contactado por $form_name. Quiere reservar una mesa para $no_of_persons. Su numero de telefono es $phone" . PHP_EOL . PHP_EOL;
+$e_body = "Has sido contactado por $form_name. Quiere reservar una mesa para $no_of_persons personas el dia $date_picker a las $time_picker. Su numero de telefono es $phone" . PHP_EOL . PHP_EOL;
 $e_content = "\"$comments\"" . PHP_EOL . PHP_EOL;
 $e_reply = "You can contact $first_name via email, $email or via phone $phone";
 
@@ -76,8 +76,8 @@ if(mail($address, $e_subject, $msg, $headers)) {
 
 	echo "<fieldset>";
 	echo "<div id='success_page'>";
-	echo "<h1>Email Sent Successfully.</h1>";
-	echo "<p>Thank you <strong>$form_name</strong>, your message has been submitted to us.</p>";
+	echo "<h1>Reserva realizada correctamente.</h1>";
+	echo "<p>Gracias <strong>$form_name</strong>, su mensaje ha sido enviado.</p>";
 	echo "</div>";
 	echo "</fieldset>";
 
