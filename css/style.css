@@ -208,14 +208,11 @@ iframe{
   justify-content: space-around;
   flex-wrap: nowrap;
   align-items: center;
+width:100%;		
 }
 
 #logos {
   margin: 30px;
-}
-
-img {
-
 }
 
 .iframeContainer{
