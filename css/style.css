@@ -263,6 +263,11 @@ iframe{
      margin: -100px 0 0 -100px;
  }
 
+ #descarga{
+     margin-top: 30px;
+     display: flex;
+     justify-content: center;
+ }
 
 /*------------------------------------------------------------------
    	Scrollup
